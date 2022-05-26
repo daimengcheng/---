@@ -1,0 +1,14 @@
+<!--components/home-video-item1/index.wxml-->
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<view class="item">
+  <!-- 封面 -->
+  <view class="cover">
+    <image src="{{itemInfo.cover}}" class="img" mode="widthFix"></image>
+    <view class="count">{{format.palyConutFormat(itemInfo.playCount)}}</view>
+    <view class="duration">{{format.durationFormat(itemInfo.mv.videos[0].duration)}}</view>
+  </view>
+  <!-- 视频介绍 -->
+  <view class="info">
+    <view class="name">{{itemInfo.name}}- {{itemInfo.artistName}}</view>
+  </view>
+</view>

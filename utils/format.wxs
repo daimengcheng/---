@@ -1,0 +1,36 @@
+// wxs:不支持es6及以后的语法
+
+// 对播放量的数据格式化
+function palyConutFormat(count){
+  var count = parseInt(count)
+  if(count>=100000000){
+    return (count / 100000000).toFixed(1) + "亿"
+  }else if(count >= 10000){
+    return (count / 10000).toFixed(1) + "万"
+  }else{
+    return count
+  }
+}
+
+// 对只有一位数字的时间进行处理
+function fillZero(number){
+  if(number<10){
+    return "0"+number
+  }
+    return number
+}
+
+
+// 对视频时长的格式化输出
+function durationFormat(duration){
+  var duration = parseInt(duration)/1000
+  var second = Math.floor((duration%60))
+  var min = Math.floor(duration / 60)
+  return fillZero(min) + ":" + fillZero(second)
+}
+
+module.exports = {
+  palyConutFormat:palyConutFormat,
+  durationFormat:durationFormat
+
+}
