@@ -1,0 +1,16 @@
+## 1. 动态获取图片的高度,使swiper组件适应所有设备
+
+```js
+// 当图片加载完成时的回调
+  handleImageBindLoad(event){
+      // 返回一个SelectorQuery 对象实例
+    const query = wx.createSelectorQuery()
+    query.select('.image').boundingClientRect() //绑定这个矩形的信息
+    // query.selectViewport().scrollOffset()
+    // 执行
+    query.exec((res)=>{
+      this.setData({swiperHeihgt:res[0].height})
+    })
+  }
+```
+

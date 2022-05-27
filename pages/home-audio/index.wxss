@@ -1,1 +1,15 @@
 /* pages/home-audio/index.wxss */
+page{
+  background-color: #fafafa;
+}
+.swiper{
+  /* height: 100%;
+  width: 100%; */
+}
+.swiper-item{
+  height: 100%;
+  width: 100%;
+}
+.swiper-item .image{
+  width: 100%;
+}

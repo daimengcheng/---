@@ -1,2 +1,26 @@
 <!--pages/home-audio/index.wxml-->
-<text>pages/home-audio/index.wxml</text>
+<!-- 搜索框组件 -->
+<van-search 
+  placeholder="请输入您想听的音乐"
+  background="#fff"
+  shape="round"
+  disabled
+  bindtap="toSearchDetail"
+  />
+
+<!-- 轮播图组件 -->
+<swiper 
+  class="swiper" 	
+  indicator-dots 	
+  indicator-color="#7be8b1" 	
+  autoplay
+  circular
+  easing-function="easeInOutCubic"
+  style="height: {{swiperHeihgt}}px;"
+>
+  <block wx:for="{{banners}}" wx:key="id">
+    <swiper-item class="swiper-item" >
+    <image class="image" src="{{item.pic}}" mode="widthFix" bindload="handleImageBindLoad"></image>
+  </swiper-item>
+  </block>
+</swiper>

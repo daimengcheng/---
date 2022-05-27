@@ -1,0 +1,8 @@
+<!--pages/search-detail/index.wxml-->
+<van-search 
+  placeholder="请输入您想听的音乐"
+  background="#fff"
+  shape="round"
+  disabled
+  bindtap="toSearchDetail"
+  />

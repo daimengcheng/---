@@ -3,9 +3,17 @@
     "miniprogram": {
       "list": [
         {
-          "name": "home-vedio",
-          "pathName": "pages/home-vedio/index",
+          "name": "home-video",
+          "pathName": "pages/home-video/index",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/video-detail/index",
+          "query": "id=14522271",
+          "launchMode": "default",
           "scene": null
         }
       ]
