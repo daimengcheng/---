@@ -1,7 +1,7 @@
 /* pages/home-audio/index.wxss */
 page{
   background-color: #fafafa;
-  padding: 0 10rpx;
+  padding: 0 20rpx;
 }
 .van-search{
   padding: 10px 0 !important;

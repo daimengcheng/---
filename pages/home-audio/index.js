@@ -16,6 +16,9 @@ Page({
     swiperHeihgt:0,
     rankSongs:[],//推荐排行歌曲
     hotSongList:[],//热门歌单
+    newSongRanking:[],//新歌榜
+    hotSongRanking:[],//热门榜
+    topSongRanking:[],//飙升榜
   },
 
   /**
@@ -39,7 +42,24 @@ Page({
     recommendStore.onState("hotSongMenu",(res)=>{
       this.setData({hotSongList:res})
     })
-    
+
+    // 获取推荐歌单
+    recommendStore.dispatch("getRecommendSongMenuAction")
+    recommendStore.onState("recommendSongMenu",(res)=>{
+      this.setData({recommendSongMenu:res})
+    })
+
+    // 获取榜单信息
+    recommendStore.dispatch("getRankDetailAction")
+    recommendStore.onState("topSongRanking",(res)=>{
+      this.setData({topSongRanking:res})
+    })
+    recommendStore.onState("newSongRanking",(res)=>{
+      this.setData({newSongRanking:res})
+    })
+    recommendStore.onState("hotSongRanking",(res)=>{
+      this.setData({hotSongRanking:res})
+    })
   },
 
   // 点击页面跳转搜索页面

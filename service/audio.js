@@ -10,7 +10,12 @@ export function getHotRankSongs(){
   return CzRequest.get("/personalized/newsong")
 }
 
-// 获取热门歌单
-export function getHotSongMenu(limit){
-  return CzRequest.get("/top/playlist",{limit})
+// 获取歌单
+export function getHotSongMenu(limit,cat="全部"){
+  return CzRequest.get("/top/playlist",{cat,limit})
+}
+
+// 获取歌曲排行榜
+export function getRankSongMenu(){
+  return CzRequest.get("/toplist/detail")
 }

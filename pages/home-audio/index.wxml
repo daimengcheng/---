@@ -34,7 +34,21 @@
 </view>
 
 <!-- 热门歌单 -->
-<view class="hot-song-menu" >
+<!-- <view class="hot-song-menu" >
   <area-header title="热门歌单" ></area-header>
   <song-menu-area songList="{{hotSongList}}"></song-menu-area>
+</view> -->
+
+<!-- 推荐歌单 -->
+<!-- <view class="hot-song-menu" >
+  <area-header title="推荐歌单" ></area-header>
+  <song-menu-area songList="{{recommendSongMenu}}"></song-menu-area>
+</view> -->
+
+<!-- 榜单 -->
+<view class="ran-song-menu">
+  <area-header title="巅峰榜"></area-header>
+  <rank-item itemInfo="{{newSongRanking}}"></rank-item>
+  <rank-item itemInfo="{{hotSongRanking}}"></rank-item>
+  <rank-item itemInfo="{{topSongRanking}}"></rank-item>
 </view>
