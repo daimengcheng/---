@@ -1,4 +1,6 @@
 // pages/home-audio/index.js
+import { recommendStore } from "../../store/index";
+
 import {getHomeBanners} from '../../service/audio'
 import queryRect from '../../utils/query-rect'
 import {throttle,debounce} from '../../utils/Throttle'
@@ -11,7 +13,9 @@ Page({
    */
   data: {
     banners:[],//首页轮播图数据
-    swiperHeihgt:0
+    swiperHeihgt:0,
+    rankSongs:[],//推荐排行歌曲
+    hotSongList:[],//热门歌单
   },
 
   /**
@@ -20,6 +24,22 @@ Page({
   onLoad: async function (options) {
     const res = await getHomeBanners()
     this.setData({banners:res.banners})
+
+    // 获取推荐歌曲
+    recommendStore.dispatch("getRecommendSong") 
+    // this.setData({rankSongs:recommendStore.state.recommendSongs})
+    // recommendStore.onState("recommendSongs",)
+    recommendStore.onState("recommendSongs",(res)=>{
+      if(!res) return
+      this.setData({rankSongs:recommendStore.state.recommendSongs.slice(0,6)})
+    })
+
+    // 获取热门歌单
+    recommendStore.dispatch("getHotSongMenuAction")
+    recommendStore.onState("hotSongMenu",(res)=>{
+      this.setData({hotSongList:res})
+    })
+    
   },
 
   // 点击页面跳转搜索页面

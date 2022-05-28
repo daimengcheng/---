@@ -1,14 +1,21 @@
 /* pages/home-audio/index.wxss */
 page{
   background-color: #fafafa;
+  padding: 0 10rpx;
+}
+.van-search{
+  padding: 10px 0 !important;
 }
 .swiper{
   /* height: 100%;
   width: 100%; */
+  border-radius: 10rpx;
+  overflow: hidden;
 }
 .swiper-item{
   height: 100%;
   width: 100%;
+  /* border-radius: 10rpx; */
 }
 .swiper-item .image{
   width: 100%;

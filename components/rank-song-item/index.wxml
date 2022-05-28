@@ -1,0 +1,12 @@
+<!--components/rank-song-item/index.wxml-->
+<view class="item">
+  <view class="left">
+    <image class="image" src="{{itemInfo.picUrl}}" ></image>
+  </view>
+  <view class="right">
+    <view class="song-name">{{itemInfo.name}}</view>
+    <view class="art-name">{{itemInfo.song.artists[0].name}}</view>
+  </view>
+    <image class="icon-image" src="/assets/images/icons/arrow-right.png"></image>
+</view>
+  

@@ -1,1 +1,37 @@
 /* pages/video-detail/index.wxss */
+
+.video{
+  width: 100%;
+}
+
+.container{
+  overflow: auto;
+}
+
+/* mv信息栏 */
+.info{
+  height: 200rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.info .name{
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.info .art-name{
+  color: #7a7575;
+}
+.info .desc{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  color: #cccccc;
+}
+.desc .play-counter{
+  margin-right: 20rpx;
+}
+
+/* 相关mv信息 */
+.relative-mv{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}

@@ -1,4 +1,3 @@
-<!--pages/home-audio/index.wxml-->
 <!-- 搜索框组件 -->
 <van-search 
   placeholder="请输入您想听的音乐"
@@ -6,7 +5,7 @@
   shape="round"
   disabled
   bindtap="toSearchDetail"
-  />
+/>
 
 <!-- 轮播图组件 -->
 <swiper 
@@ -24,3 +23,18 @@
   </swiper-item>
   </block>
 </swiper>
+
+<!-- 更多歌曲 -->
+<view class="recommend-song">
+  <area-header title="歌曲推荐"></area-header>
+  <!-- 歌曲列表 -->
+  <block wx:for="{{rankSongs}}" wx:key="id">
+    <rank-song-item itemInfo="{{item}}"></rank-song-item>
+  </block>
+</view>
+
+<!-- 热门歌单 -->
+<view class="hot-song-menu" >
+  <area-header title="热门歌单" ></area-header>
+  <song-menu-area songList="{{hotSongList}}"></song-menu-area>
+</view>

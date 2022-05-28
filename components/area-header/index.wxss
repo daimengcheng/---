@@ -1,0 +1,33 @@
+/* components/area-header/index.wxss */
+.header{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left, .right{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.left .title{
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.right .slot:empty + .default {
+  display: flex;
+  align-items:center;
+}
+
+
+.right .image{
+  width: 60rpx;
+}
+
+
+.right .default{
+  
+  display: none;
+}
+

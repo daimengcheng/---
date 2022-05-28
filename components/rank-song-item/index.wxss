@@ -1,0 +1,36 @@
+/* components/rank-song-item/index.wxss */
+.item{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 20rpx;
+}
+.left{
+  height: 100%;
+  /* border-radius: 10rpx;
+  overflow: hidden; */
+  margin-right: 20rpx;
+}
+.left .image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+}
+.right{
+  width: 65%;
+}
+.right .song-name{
+  margin-bottom: 5rpx;
+  text-overflow: ellipsis; /*对于的用省略号代替*/
+  display: -webkit-box; /*浮动布局*/
+  -webkit-line-clamp: 2; /*显示的行数*/
+  -webkit-box-orient: vertical;/*垂直排列*/
+}
+
+.icon-image{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  right: 40rpx;
+  bottom: 50rpx;
+}

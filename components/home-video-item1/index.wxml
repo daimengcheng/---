@@ -4,7 +4,7 @@
   <!-- 封面 -->
   <view class="cover">
     <image src="{{itemInfo.cover}}" class="img" mode="widthFix"></image>
-    <view class="count">{{format.palyConutFormat(itemInfo.playCount)}}</view>
+    <view class="count">{{format.playConutFormat(itemInfo.playCount)}}</view>
     <view class="duration">{{format.durationFormat(itemInfo.mv.videos[0].duration)}}</view>
   </view>
   <!-- 视频介绍 -->

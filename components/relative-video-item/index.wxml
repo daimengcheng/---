@@ -1,0 +1,13 @@
+<!--components/relative-video-item/index.wxml-->
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<view class="item">
+  <view class="left">
+    <image class="image" src="{{itemInfo.coverUrl}}" mode="widthFix"></image>
+    <text class="play-counter">{{format.playConutFormat(itemInfo.playTime)}}</text>
+  </view>
+
+  <view class="right">
+    <view class="name">{{itemInfo.title}}</view>
+    <view class="art-name">{{itemInfo.transName?itemInfo.transName:""}}</view>
+  </view>
+</view>

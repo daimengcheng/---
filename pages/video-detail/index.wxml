@@ -1,2 +1,29 @@
 <!--pages/video-detail/index.wxml-->
-<text>pages/video-detail/index.wxml</text>
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<video 
+  class="video" 
+  src="{{mvUrl}}" 	
+  autoplay
+  enable-play-gesture
+>
+</video>
+
+<view class="container" style="height:{{containerHeight-2}}px;">
+  <!-- 信息栏 -->
+<view class="info">
+  <view class="name">{{mvData.name}}</view>
+  <view class="art-name">{{mvData.artistName}}</view>
+  <view class="desc">
+    <text class="play-counter">{{format.palyConutFormat(mvData.playCount)}}次播放</text>
+    <text class="time">{{mvData.publishTime}}</text>
+  </view>
+</view>
+
+<!-- 相关视频信息 -->
+<view class="relative-mv">
+  <area-header title="推荐视频" showRight="{{false}}"></area-header>
+  <block wx:for="{{relativeVideos}}" wx:key="id">
+    <relative-video-item itemInfo="{{item}}"></relative-video-item>
+  </block> 
+</view>
+</view>

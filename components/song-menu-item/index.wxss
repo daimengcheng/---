@@ -1,0 +1,23 @@
+/* components/song-menu-item/index.wxss */
+.item{
+  display: inline-block;
+  width: 220rpx;
+  margin-left: 20rpx;
+}
+.item .top{
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.item .top .image{
+  width: 220rpx;
+}
+
+.item .bottom{
+  width: 100%;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

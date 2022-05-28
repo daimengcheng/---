@@ -1,7 +1,7 @@
 // wxs:不支持es6及以后的语法
 
 // 对播放量的数据格式化
-function palyConutFormat(count){
+function playConutFormat(count){
   var count = parseInt(count)
   if(count>=100000000){
     return (count / 100000000).toFixed(1) + "亿"
@@ -30,6 +30,6 @@ function durationFormat(duration){
 }
 
 module.exports = {
-  palyConutFormat:palyConutFormat,
+  playConutFormat:playConutFormat,
   durationFormat:durationFormat
 }
