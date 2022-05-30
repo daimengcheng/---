@@ -1,0 +1,15 @@
+<!--components/rank-detail-item/index.wxml-->
+<view class="item">
+  <view class="left">
+  <slot></slot>
+  </view>
+  <view class="right">
+    <view class="info">
+      <view class="name">{{itemInfo.name}}</view>
+      <view class="art-name">
+        <image mode="widthFix" class="image" src="/assets/images/icons/sq_icon.png"></image>
+        <text>{{itemInfo.song.artists[0].name || itemInfo.ar[0].name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,7 +1,7 @@
 // pages/home-audio/index.js
 import { recommendStore } from "../../store/index";
 
-import {getHomeBanners} from '../../service/audio'
+import {getHomeBanners,getSongMenuDetail} from '../../service/audio'
 import queryRect from '../../utils/query-rect'
 import {throttle,debounce} from '../../utils/Throttle'
 // const throttleQueryRect = throttle(queryRect)
@@ -18,7 +18,8 @@ Page({
     hotSongList:[],//热门歌单
     newSongRanking:[],//新歌榜
     hotSongRanking:[],//热门榜
-    topSongRanking:[],//飙升榜
+    topSongRanking:[],//飙升榜,
+    songMenuList:[], //歌单中的歌曲
   },
 
   /**
@@ -59,6 +60,31 @@ Page({
     })
     recommendStore.onState("hotSongRanking",(res)=>{
       this.setData({hotSongRanking:res})
+    })
+  },
+
+  // 监听歌曲推荐的更多的回调
+  handleMoreSongs(e){
+    const title = e.currentTarget.dataset.title
+    wx.navigateTo({
+      url: `/pages/rank-detail/index?title=${title}`,
+    })
+  },
+
+  // 监听不同榜单的跳转回调
+  async handleRank(e){
+    const title = e.currentTarget.dataset.title
+    const id =  e.currentTarget.dataset.id
+    // recommendStore.dispatch("getRankMenuDetail",id)
+    wx.navigateTo({
+      url: `/pages/rank-detail/index?title=${title}&&id=${id}`,
+    })
+  },
+  // 监听跳转不同歌单
+  handleSongMenu(e){
+    const title = e.currentTarget.dataset.title
+    wx.navigateTo({
+      url: `/pages/rank-detail/index?id=${e.detail.id}&&title=${title}`,
     })
   },
 

@@ -1,1 +1,38 @@
 /* pages/search-detail/index.wxss */
+
+
+
+.hot-search{
+  width: 90%;
+  margin:30rpx 0 0 40rpx;
+}
+
+.hot-search text{
+  width: 400rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.hot-search .hot-items{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.hot-search .hot-item{
+  margin-right: 30rpx;
+  height: 80rpx;
+}
+.hot-item:first-child{
+  color: rgb(52, 202, 102);
+}
+
+/* 搜索建议 */
+.search-suggestion{
+  height: 90vh;
+  padding:20rpx 0 0 40rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.search-suggestion .suggestion-item{
+  height: 80rpx;
+}

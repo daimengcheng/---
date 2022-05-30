@@ -26,7 +26,7 @@
 
 <!-- 更多歌曲 -->
 <view class="recommend-song">
-  <area-header title="歌曲推荐"></area-header>
+  <area-header title="歌曲推荐" bind:click="handleMoreSongs" data-title="歌曲推荐"></area-header>
   <!-- 歌曲列表 -->
   <block wx:for="{{rankSongs}}" wx:key="id">
     <rank-song-item itemInfo="{{item}}"></rank-song-item>
@@ -34,21 +34,46 @@
 </view>
 
 <!-- 热门歌单 -->
-<!-- <view class="hot-song-menu" >
+<view class="hot-song-menu" >
   <area-header title="热门歌单" ></area-header>
-  <song-menu-area songList="{{hotSongList}}"></song-menu-area>
-</view> -->
+  <song-menu-area  
+    songList="{{hotSongList}}" 
+    bind:click="handleSongMenu"
+    data-title="热门歌单"
+    >
+  </song-menu-area>
+</view>
 
 <!-- 推荐歌单 -->
-<!-- <view class="hot-song-menu" >
+<view class="recommend-song-menu" >
   <area-header title="推荐歌单" ></area-header>
-  <song-menu-area songList="{{recommendSongMenu}}"></song-menu-area>
-</view> -->
+  <song-menu-area 
+    bind:click="handleSongMenu" 
+    songList="{{recommendSongMenu}}"
+    data-title="推荐歌单"
+    >
+  </song-menu-area>
+</view>
 
 <!-- 榜单 -->
 <view class="ran-song-menu">
-  <area-header title="巅峰榜"></area-header>
-  <rank-item itemInfo="{{newSongRanking}}"></rank-item>
-  <rank-item itemInfo="{{hotSongRanking}}"></rank-item>
-  <rank-item itemInfo="{{topSongRanking}}"></rank-item>
+  <area-header title="巅峰榜" showRight="{{false}}"></area-header>
+  <rank-item 
+    itemInfo="{{newSongRanking}}" 
+    bindtap="handleRank" 
+    data-title="新歌榜" 
+    data-id="{{newSongRanking.id}}">
+  </rank-item>
+  <rank-item 
+    itemInfo="{{hotSongRanking}}" 
+    bindtap="handleRank" 
+    data-title="原创榜"
+    data-id="{{hotSongRanking.id}}">
+  </rank-item>
+  <rank-item 
+    itemInfo="{{topSongRanking}}" 
+    bindtap="handleRank" 
+    data-title="飙升榜"
+    data-id="{{topSongRanking.id}}">
+  </rank-item>
 </view>

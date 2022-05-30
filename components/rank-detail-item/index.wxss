@@ -1,0 +1,21 @@
+/* components/rank-detail-item/index.wxss */
+.item{
+  width: 100%;
+  display: flex;
+  margin-top: 20rpx;
+}
+.left {
+  margin-right: 15rpx;
+}
+.info .name{
+  font-weight: 500;
+  margin-bottom: 10rpx;
+  font-family: "微软雅黑";
+}
+.info .art-name{
+  color: #dfdfdf;
+}
+.info .art-name .image{
+  width: 40rpx;
+  margin-right: 15rpx;
+}

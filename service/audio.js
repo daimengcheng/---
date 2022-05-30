@@ -19,3 +19,13 @@ export function getHotSongMenu(limit,cat="全部"){
 export function getRankSongMenu(){
   return CzRequest.get("/toplist/detail")
 }
+
+// 获取歌单详情
+export function getSongMenuDetail(id){
+  return CzRequest.get("/playlist/detail",{id})
+}
+
+// 根据trackID获取歌曲
+export function getSongByID(ids) {
+  return CzRequest.get("/song/detail",{ids}) 
+}

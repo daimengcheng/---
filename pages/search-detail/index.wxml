@@ -3,6 +3,22 @@
   placeholder="请输入您想听的音乐"
   background="#fff"
   shape="round"
-  disabled
-  bindtap="toSearchDetail"
+  bind:change="handlechange"
   />
+
+<!-- 热门搜索 -->
+<view class="hot-search" wx:if="{{searchSuggestions.length ===0}}">
+  <text>搜索历史:</text>
+  <view class="hot-items">
+    <view class="hot-item" wx:for="{{hots}}" wx:key="index">
+    {{item.first}}
+  </view>
+  </view>
+</view>
+
+<!-- 搜索建议 -->
+<view class="search-suggestion" wx:if="{{searchSuggestions.length !==0}}">
+  <block wx:for="{{searchSuggestions}}" wx:key="*this">
+    <view class="suggestion-item">{{item.keyword}}</view>
+  </block>
+</view>

@@ -1,13 +1,13 @@
-// components/song-menu-area/index.js
+// components/rank-detail-item/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    songList:{
-      type:Array,
-      value:[]
-    },
+    itemInfo:{
+      type:Object,
+      value:{}
+    }
   },
 
   /**
@@ -21,8 +21,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleClick(e){
-      this.triggerEvent("click",{id:e.currentTarget.dataset.id})
-    }
+
   }
 })

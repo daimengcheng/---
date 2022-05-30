@@ -1,0 +1,51 @@
+<!--pages/rank-detail/index.wxml-->
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<!-- 封面详情 -->
+<view class="info-item-container">
+  <block wx:if="{{detailInfo.name}}">
+  <view class="info-item" >
+    <image class="bg-image" mode="aspectFill" src="{{detailInfo.creator.backgroundUrl}}"></image>
+    <view class="top">
+      <view class="left">
+        <image mode="widthFix" class="image" src="{{detailInfo.coverImgUrl}}"></image>
+      </view>
+      <view class="right">
+        <view class="tags">
+          <text class="tag-item" wx:for="{{detailInfo.tags}}" wx:key="*this">{{item}}</text>
+        </view>
+        <view class="info">
+          <image class="avatar" mode="widthFix" src="{{detailInfo.creator.avatarUrl}}"></image>
+          <text class="nick-name">{{detailInfo.creator.nickname}}</text>
+        </view>
+        <view class="desc">
+          <text >简介:{{detailInfo.creator.signature}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="favo">
+        <image class="like" mode="widthFix" src="/assets/images/icons/favor_icon.png"></image>
+        <text class="counter">{{format.playConutFormat(detailInfo.shareCount)}}</text>
+      </view>
+      <view class="share">
+        <image src="/assets/images/icons/share_icon.png" mode="widthFix"></image>
+        <text>分享</text>
+      </view>
+    </view>
+  </view>
+</block>
+</view>
+
+
+
+<area-header title="{{title}}" showRight="{{false}}"></area-header>
+<!-- 歌曲列表 -->
+<view class="song-list-container" style=" overflow: auto;">
+  <block wx:for="{{showData}}" wx:key="id">
+  <rank-detail-item class="song-list"  itemInfo="{{item}}">
+    <view>{{index+1}}. </view>
+  </rank-detail-item>
+</block>
+</view>
+
+

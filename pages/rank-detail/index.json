@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "area-header":"/components/area-header/index",
+    "rank-detail-item":"/components/rank-detail-item",
+    "van-loading": "@vant/weapp/loading/index"
+  }
+}

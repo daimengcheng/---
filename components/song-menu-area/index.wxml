@@ -1,8 +1,7 @@
 <!--components/song-menu-area/index.wxml-->
 <scroll-view class="scroll-view" scroll-x enable-flex>
-  
   <block wx:for="{{songList}}" wx:key="id">
-    <song-menu-item itemInfo="{{item}}"></song-menu-item>
+    <song-menu-item itemInfo="{{item}}" bind:tap="handleClick" data-id="{{item.id}}"></song-menu-item>
   </block>
-</scroll-view> 
+</scroll-view>  
   

@@ -3,9 +3,9 @@
   <view class="left">
     <text class="title">{{title}}</text>
   </view>
-  <view class="right" wx:if="{{showRight}}">
+  <view class="right" wx:if="{{showRight}}" bind:tap="cellClick">
     <view class="slot"><slot></slot></view>
-    <view class="default">
+    <view class="default" >
       <text>更多</text>
       <image src="/assets/images/icons/arrow-right.png" class="image" mode="widthFix"></image>
     </view>
