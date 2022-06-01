@@ -5,10 +5,12 @@
   </view>
   <view class="right">
     <view class="info">
-      <view class="name">{{itemInfo.name}}</view>
+      <view class="song-name">{{itemInfo.name}}</view>
       <view class="art-name">
         <image mode="widthFix" class="image" src="/assets/images/icons/sq_icon.png"></image>
-        <text>{{itemInfo.song.artists[0].name || itemInfo.ar[0].name}}</text>
+        <view class="name">{{itemInfo.song.artists[0].name || itemInfo.artists[0].name}}</view>
+        <text class="bounce">.</text>
+        <view class="alia">{{itemInfo.alias[0]}}</view>
       </view>
     </view>
   </view>

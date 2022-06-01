@@ -7,13 +7,38 @@
 .left {
   margin-right: 15rpx;
 }
-.info .name{
+.right{
+  width: 100%;
+}
+.info .song-name{
   font-weight: 500;
   margin-bottom: 10rpx;
   font-family: "微软雅黑";
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-line-clamp: 1;
 }
 .info .art-name{
-  color: #dfdfdf;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.art-name .name{
+  white-space: nowrap;
+}
+.art-name .alia{
+  width: 60%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-line-clamp: 1;
+}
+
+.info .art-name .bounce{
+  margin: 0 10rpx;
 }
 .info .art-name .image{
   width: 40rpx;

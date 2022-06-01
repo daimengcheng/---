@@ -4,21 +4,43 @@
   background="#fff"
   shape="round"
   bind:change="handlechange"
+  show-action="{{keywords}}"
+  bind:focus="handleFocus"
   />
 
 <!-- 热门搜索 -->
-<view class="hot-search" wx:if="{{searchSuggestions.length ===0}}">
-  <text>搜索历史:</text>
+<view class="hot-search" wx:if="{{searchSuggestions.length ===0 && !songList.length}}">
+  <text>热门搜索:</text>
   <view class="hot-items">
-    <view class="hot-item" wx:for="{{hots}}" wx:key="index">
+    <view 
+      class="hot-item" 
+      wx:for="{{hots}}" 
+      wx:key="index" 
+      bindtap="handleTagTap" 
+      data-first="{{item.first}}"
+    >
     {{item.first}}
   </view>
   </view>
 </view>
 
 <!-- 搜索建议 -->
-<view class="search-suggestion" wx:if="{{searchSuggestions.length !==0}}">
+<view class="search-suggestion" wx:if="{{searchSuggestions.length && !songList.length}}">
+  <view class="title">搜索"{{keywords}}"</view>
   <block wx:for="{{searchSuggestions}}" wx:key="*this">
-    <view class="suggestion-item">{{item.keyword}}</view>
+    <view 
+    class="suggestion-item" 
+    data-keyword="{{item.keyword}}" 
+    bindtap="handleSuggesttionTap"
+    >
+      {{item.keyword}}
+    </view>
+  </block>
+</view>
+
+<!-- 搜索结果展示 -->
+<view class="search-result-list" wx:if="{{songList.length}}">
+  <block wx:for="{{songList}}" wx:key="id">
+    <rank-detail-item itemInfo="{{item}}">{{index+1}}.</rank-detail-item>
   </block>
 </view>

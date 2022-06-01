@@ -15,18 +15,17 @@ export function throttle(fn,duration=10){
   return fnThrottle
 }
 
-export function debounce(fn,delay=100){
+export function debounce(fn,delay=500){
   let timer = null
   function fnDebounce(...args){
     return new Promise((resolve)=>{
-      if(timer)  clearTimeout(timer)
+      if(timer) clearTimeout(timer)
       timer = setTimeout(() => {
-        const result = fn.apply(this,args) 
+        const result = fn.call(this,args) 
         resolve(result)
       }, delay);
     })
   }
-
   return fnDebounce
 }
 
