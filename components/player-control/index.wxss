@@ -1,0 +1,9 @@
+/* components/player-control/index.wxss */
+.player-control{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.player-control .image{
+  width: 120rpx;
+}

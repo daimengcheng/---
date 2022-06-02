@@ -1,8 +1,37 @@
 <!--pages/player/index.wxml-->
 <view class="player-container">
+
+  <!-- 自定义顶部导航栏 -->
+  <custom-tab></custom-tab>
   <!-- 封面 -->
   <view class="cover">
     <image mode="heightFix" class="image"src="{{songDetail.al.picUrl}}"></image>
     <view class="mark"></view>
   </view>
+
+  <!-- 歌曲信息 -->
+  <view class="info">
+    <view class="album">
+      <image class="image" mode="widthFix" src="{{songDetail.al.picUrl}}"></image>
+    </view>
+    <view class="desc">
+      <view class="song-name">孤勇者</view>
+      <view class="art-name">陈奕迅</view>
+    </view>
+    <view class="lyric">
+      <text>我是歌词</text>
+    </view>
+    <!-- 进度条 -->
+    <view class="progress">
+      <van-progress stroke-width="2" inactive ></van-progress>
+    </view>
+    <!-- 歌曲播放进度 -->
+    <view class="time">
+      <view class="start">00:00</view>
+      <view class="end">03:10</view>
+    </view>
+  </view>
+
+  <!-- 播放控件 -->
+  <player-control></player-control>
 </view>

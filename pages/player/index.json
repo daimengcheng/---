@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "custom-tab":"/components/custom-tab",
+    "van-progress": "@vant/weapp/progress/index",
+    "player-control":"/components/player-control"
+  },
+  "navigationStyle": "custom"
 }

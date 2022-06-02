@@ -1,0 +1,22 @@
+/* components/custom-tab/index.wxss */
+.container{
+  display: flex;
+  height: 80rpx;
+  width: 100%;
+  /* background-color: red; */
+  position: relative;
+  left: 0;
+  top: 80rpx;
+  align-items: center;
+  color: white;
+}
+.left .image{
+  width: 50rpx; 
+}
+
+.mid{
+  margin: 0 auto;
+}
+.mid .bounce{
+  margin: 0 10rpx;
+}

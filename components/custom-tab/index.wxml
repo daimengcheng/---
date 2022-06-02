@@ -1,0 +1,15 @@
+<!--components/custom-tab/index.wxml-->
+<view class="container">
+  <view class="left">
+    <image class="image" src="/assets/images/icons/arrow-left.png" mode="widthFix"></image>
+    <!-- <slot name="left"></slot> -->
+  </view>
+  <view class="mid">
+    <text>歌曲</text>
+    <text class="bounce">|</text>
+    <text>歌词</text>
+  </view>
+  <view class="right">
+    <slot name="right"></slot>
+  </view>
+</view>

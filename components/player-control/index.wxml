@@ -1,0 +1,8 @@
+<!--components/player-control/index.wxml-->
+<view class="player-contorl">
+  <image mode="widthFix" class="image" src="/assets/images/player/play_order.png"></image>
+  <image mode="widthFix" class="image" src="/assets/images/player/play_prev.png"></image>
+  <image mode="widthFix" class="image" src="/assets/images/player/play_pause.png"></image>
+  <image mode="widthFix" class="image" src="/assets/images/player/play_next.png"></image>
+  <image mode="widthFix" class="image" src="/assets/images/player/play_music.png"></image>
+</view>
